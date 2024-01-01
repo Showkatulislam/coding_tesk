@@ -17,13 +17,13 @@ import Image from 'next/image';
 export default function ModbileViewSlider() {
     const [swiperRef, setSwiperRef] = useState(null);
   return (
-    <>
+    <div className='lg:hidden'>
       <Swiper
          centeredSlides={true}
          spaceBetween={30}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper w-[450px] lg:hidden mx-auto"
+        className="mySwiper w-[450px] mx-auto"
       >
         <SwiperSlide>
             <Image src='/images/Ractangle2.png' alt="image" width={300} height={300} />
@@ -45,6 +45,6 @@ export default function ModbileViewSlider() {
         </SwiperSlide>
   
       </Swiper>
-    </>
+    </div>
   );
 }
