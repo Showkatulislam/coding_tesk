@@ -1,8 +1,10 @@
+'use client'
 import { DollarSignIcon, Heart, Share2, ShoppingCart, Star, StarIcon } from 'lucide-react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const ProductDetailInfo = () => {
-
+        const [quantity,setQuanty]=useState(0)
+        const [color,setColor]=useState("Black")
     return (
         <div className="lg:bg-[url('/images/bg-right.png')] bg-no-repeat bg-right-bottom flex flex-col gap-y-8">
             {/* title  */}
@@ -58,32 +60,32 @@ const ProductDetailInfo = () => {
                 <div>
                     <p>Size</p>
                 </div>
-                <div className='bg-gray-300 p-1'>
+                <div className='bg-gray-300 px-2 py-1'>
                     <p className='text-[#F97316]'>M</p>
                 </div>
-                <div className='bg-gray-300 p-1'>
+                <div className='bg-gray-300 px-2 py-1'>
                     <p className='text-[#F97316]'>L</p>
                 </div>
-                <div className='bg-gray-300 p-1'>
+                <div className='bg-gray-300 px-2 py-1'>
                     <p className='text-[#F97316]'>XL</p>
                 </div>
-                <div className='bg-gray-300 p-1'>
-                    <p className='text-[#F97316]'>XXL</p>
+                <div className='bg-[#F97316] px-2 py-1'>
+                    <p className='text-white'>XXL</p>
                 </div>
             </div>
             {/* color control */}
 
             <div className='flex flex-col gap-y-2'>
                 <div>
-                    <p className='text-gray-500 text-base'>Color <span className='text-black'>black</span></p>
+                    <p className='text-gray-500 text-base'>Color <span className='text-black'>{color}</span></p>
                 </div>
                 <div className='flex space-x-4'>
-                    <div className='w-8 h-8 bg-[#FFE91F]'/>
-                    <div className='w-8 h-8 bg-[#79CAAD]'/>
-                    <div className='w-8 h-8 bg-[#FF8E40]'/>
-                    <div className='w-8 h-8 bg-[#1F93FF]'/>
-                    <div className='w-8 h-8 bg-[#E01FFF]'/>
-                    <div className='w-8 h-8 bg-[#FF1F1F]'/>
+                    <div onClick={()=>setColor("Yellow")} className='w-8 h-8 bg-[#FFE91F]'/>
+                    <div onClick={()=>setColor("Cayan")} className='w-8 h-8 bg-[#79CAAD]'/>
+                    <div onClick={()=>setColor("Orange")} className='w-8 h-8 bg-[#FF8E40]'/>
+                    <div onClick={()=>setColor("Blue")} className='w-8 h-8 bg-[#1F93FF]'/>
+                    <div onClick={()=>setColor("Indigo")} className='w-8 h-8 bg-[#E01FFF]'/>
+                    <div onClick={()=>setColor("red")} className='w-8 h-8 bg-[#FF1F1F]'/>
                 </div>
             </div>
             <div>
@@ -95,12 +97,12 @@ const ProductDetailInfo = () => {
                     Quantity
                 </div>
                 <div className='flex items-center space-x-3 bg-gray-200 p-1 px-3'>
-                    <button className='px-1 bg-white'>+</button>
-                    <p>7</p>
-                    <button className='px-1 bg-white '>-</button>
+                    <button onClick={()=>setQuanty(pre=>pre+1)} className='px-2 py-1 bg-white'>+</button>
+                    <p>{quantity}</p>
+                    <button onClick={()=>setQuanty(pre=>pre-1)} className='px-2 py-1 bg-white '>-</button>
                 </div>
                 <div className='flex items-center'>
-                    <p>Only 46 pieces available</p>
+                    <p className='text-[#F97316]'>Only 46 pieces available</p>
                 </div>
              </div>
             <div className='flex items-center gap-x-4'>

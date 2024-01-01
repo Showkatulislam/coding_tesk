@@ -3,7 +3,7 @@ import Avatar from "./Avatar";
 
 const PersonInfo = () => {
   return (
-      <div className="flex items-center lg:gap-x-10 justify-between  border-zinc-600">
+      <div className="flex items-center lg:gap-x-10 justify-between lg:border-0 border border-zinc-500">
         <div className="flex items-center gap-x-4">
           <Avatar />
           <div className="flex flex-col gap-y-4">
