@@ -3,7 +3,7 @@ import ProductSlider from "./ProductSlider";
 
 const ProductContainerView = () => {
   return (
-    <div className="w-['450px']">
+    <div className="w-['450px'] hidden lg:block">
         <div>
         <Image
           style={{width:'450px',height:'430px'}}

@@ -10,7 +10,7 @@ interface CartProps {
 }
 const Cart = ({ description, price, discount, percentace, img }: CartProps) => {
   return (
-    <div className="lg:w-48 w-32 h-44 lg:h-72 p-1 flex flex-col items-center border border-zinc-200 gap-y-2">
+    <div className="w-48 h-72 p-1 flex flex-col items-center border border-zinc-200 gap-y-4">
       <div className="relative">
         <Image src={img} width={185} height={195} alt="card-image" />
         <div
@@ -19,8 +19,8 @@ const Cart = ({ description, price, discount, percentace, img }: CartProps) => {
         >
           <Heart className=" text-white" />
         </div>
-        <div className="lg:w-14  lg:h-8 bg-orange-600 flex items-center justify-center text-white absolute bottom-2 left-2">
-           <p className="lg:text-xs text-['8px']"> {percentace} of %</p>
+        <div className="w-14 h-8 bg-orange-600 flex items-center justify-center text-white absolute bottom-2 left-2">
+           <p className="text-xs"> {percentace} of %</p>
         </div>
       </div>
       <div>

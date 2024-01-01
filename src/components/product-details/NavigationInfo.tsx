@@ -3,7 +3,7 @@ import NavigationInfoItem from "./NavigationInfoItem";
 
 const NavigationInfo = () => {
     return (
-        <div className="h-12 py-4 flex items-center gap-x-[6px]">
+        <div className="h-12 py-4 hidden lg:flex items-center gap-x-[6px]">
             <CategoryDropdown/>
             <NavigationInfoItem text="Electronic Devices"/>
             <NavigationInfoItem text="bag and travel"/>

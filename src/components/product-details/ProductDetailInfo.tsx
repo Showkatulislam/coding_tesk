@@ -4,7 +4,7 @@ import React from 'react';
 const ProductDetailInfo = () => {
 
     return (
-        <div className="bg-[url('/images/bg-right.png')] bg-no-repeat bg-right-bottom flex flex-col gap-y-8">
+        <div className="lg:bg-[url('/images/bg-right.png')] bg-no-repeat bg-right-bottom flex flex-col gap-y-8">
             {/* title  */}
             <div>
                 <h1 className='text-[20px] font-semibold leading-[26px] text-[#2E2E2E]'>Valvet Travel Neck Pillow Folding U-Shaped Memory Foam + Eye Masks Ear buds Soft  Massage Pillow for Sleeping in Bus Car Plane </h1>
@@ -89,6 +89,20 @@ const ProductDetailInfo = () => {
             <div>
                 <p className='text-[#707070]'>Sku: <span className='text-black'>hdgfhdgf6756dsghgf7</span></p>
             </div>
+             {/* quantity */}
+             <div className='flex items-center justify-between lg:w-1/2'>
+                <div>
+                    Quantity
+                </div>
+                <div className='flex items-center space-x-3 bg-gray-200 p-1 px-3'>
+                    <button className='px-1 bg-white'>+</button>
+                    <p>7</p>
+                    <button className='px-1 bg-white '>-</button>
+                </div>
+                <div className='flex items-center'>
+                    <p>Only 46 pieces available</p>
+                </div>
+             </div>
             <div className='flex items-center gap-x-4'>
                 <button className='bg-[#F97316] w-40 px-1 h-10 text-white'>Buy Now</button>
                 <button className='bg-[#FCD34D] w-40 px-1 h-10 text-[#2E2E2E] flex items-center justify-center space-x-1'><ShoppingCart/> <span>Add to Cart</span></button>
